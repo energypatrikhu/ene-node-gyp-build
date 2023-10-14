@@ -55,11 +55,12 @@ load.resolve = load.path = function (dir) {
 		'node=' + process.versions.node,
 		process.versions.electron ? 'electron=' + process.versions.electron : '',
 		typeof __webpack_require__ === 'function' ? 'webpack=true' : '', // eslint-disable-line
-	]
-		.filter(Boolean)
-		.join(' ');
+	];
 
-	throw new Error('No native build was found for ' + target + '\n    loaded from: ' + dir + '\n');
+	var filteredTarget = target.filter(Boolean).join(' ');
+
+	console.log(target);
+	throw new Error('No native build was found for ' + filteredTarget + '\n    loaded from: ' + dir + '\n');
 
 	function resolve(dir) {
 		// Find matching "prebuilds/<platform>-<arch>" directory
