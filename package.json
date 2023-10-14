@@ -12,9 +12,9 @@
 		"test": "standard && node test"
 	},
 	"bin": {
-		"node-gyp-build": "./bin.js",
-		"node-gyp-build-optional": "./optional.js",
-		"node-gyp-build-test": "./build-test.js"
+		"ene-node-gyp-build": "./bin.js",
+		"ene-node-gyp-build-optional": "./optional.js",
+		"ene-node-gyp-build-test": "./build-test.js"
 	},
 	"license": "MIT"
 }

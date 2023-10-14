@@ -3,5 +3,5 @@ if (typeof process.addon === 'function') {
 	module.exports = process.addon.bind(process);
 } else {
 	// else use the runtime version here
-	module.exports = require('./node-gyp-build.js');
+	module.exports = require('./ene-node-gyp-build.js');
 }
